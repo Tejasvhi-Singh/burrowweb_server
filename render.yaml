@@ -4,6 +4,6 @@ services:
     env: node
     plan: free
     buildCommand: 'npm install'
-    startCommand: 'npm start'
+    startCommand: 'node career.js'
     repo: https://github.com/Tejasvhi-Singh/burrowweb_server.git
     branch: main

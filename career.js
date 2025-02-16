@@ -10,7 +10,7 @@ app.use(express.urlencoded({ extended: true }));
 
 const storage = multer.diskStorage({
   destination: (req, file, cb) => {
-    cb(null, '/d:/Website/burrowweb/uploads/');
+    cb(null, 'D:/Website/burrowweb/uploads/');
   },
   filename: (req, file, cb) => {
     cb(null, `${Date.now()}-${file.originalname}`);

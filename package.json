@@ -2,9 +2,9 @@
   "name": "burrowweb-backend",
   "version": "1.0.0",
   "description": "Backend for Burrowweb",
-  "main": "backend/career.js",
+  "main": "career.js",
   "scripts": {
-    "start": "node backend/career.js",
+    "start": "node career.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -20,6 +20,7 @@
   "homepage": "https://github.com/Tejasvhi-Singh/burrowweb_server#readme",
   "dependencies": {
     "express": "^4.17.1",
-    "multer": "^1.4.2"
+    "multer": "^1.4.2",
+    "pg": "^8.7.1"
   }
 }
