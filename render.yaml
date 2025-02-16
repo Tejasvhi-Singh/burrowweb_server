@@ -1,0 +1,18 @@
+services:
+  - type: web
+    name: burrowweb-backend
+    env: node
+    plan: free
+    buildCommand: 'npm install'
+    startCommand: 'npm start'
+    repo: https://github.com/Tejasvhi-Singh/burrowweb_server.git
+    branch: main
+
+  - type: web
+    name: burrowweb-frontend
+    env: static
+    plan: free
+    buildCommand: 'npm install && npm run build'
+    startCommand: 'npm start'
+    repo: https://github.com/Tejasvhi-Singh/Burrowweb.git
+    branch: main
