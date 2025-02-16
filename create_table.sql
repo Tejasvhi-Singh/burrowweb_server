@@ -1,0 +1,8 @@
+CREATE TABLE career_applications (
+  id SERIAL PRIMARY KEY,
+  name VARCHAR(100) NOT NULL,
+  email VARCHAR(100) NOT NULL,
+  contact VARCHAR(15) NOT NULL,
+  resume_path VARCHAR(255) NOT NULL,
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
