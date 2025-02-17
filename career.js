@@ -26,11 +26,23 @@ const pool = new Pool({
   }
 });
 
-app.get('/api/career', (req, res) => {
+app.get('/career', (req, res) => {
   res.json({ message: 'Career data' });
 });
 
-app.post('/api/career', upload.single('resume'), async (req, res) => {
+app.get('/career/check', async (req, res) => {
+  try {
+    const client = await pool.connect();
+    const result2 = await client.query('SELECT * FROM career_applications');
+    client.release();
+    res.status(200).json(result.rows);
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ message: 'Internal server error' });
+  }
+});
+
+app.post('/career', upload.single('resume'), async (req, res) => {
   const { name, email, contact } = req.body;
   const resume = req.file;
 
